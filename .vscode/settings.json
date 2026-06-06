@@ -14,5 +14,7 @@
   "eslint.validate": ["typescript", "typescriptreact"],
   "eslint.run": "onSave",
   "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "css.customData": [],
+  "css.lint.unknownAtRules": "ignore"
 }

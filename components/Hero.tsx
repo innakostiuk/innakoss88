@@ -10,7 +10,7 @@ export const Hero = () => {
   const bio = translations;
   return (
     <div className="flex min-h-[95vh] flex-col justify-end pb-14">
-      <div className="mx-auto max-w-160 px-6">
+      <div className="mx-auto w-full max-w-160 px-6">
         <span
           className="mb-3 block animate-fade-up text-[11px] font-medium
             tracking-[0.18em] text-accent uppercase [animation-delay:0.1s]"
@@ -45,7 +45,7 @@ export const Hero = () => {
           href="https://instagram.com/inna.koss88"
           className="inline-flex animate-fade-up items-center gap-2 rounded-xs
             bg-accent px-6 py-3.25 text-[13px] font-medium tracking-[0.06em]
-            text-[#0d0d0d] [animation-delay:0.38s]
+            text-black [animation-delay:0.38s]
             [transition:background_0.2s,transform_0.15s] hover:-translate-y-px
             hover:bg-[#c98500]"
         >

@@ -16,26 +16,26 @@ export const translations = {
       services: 'What I offer',
     },
     services: {
-      pole: {
+      web: {
         num: '01',
+        tag: 'Development',
+        title: 'WEB DEVELOPMENT',
+        desc: 'Custom websites and web apps for creators, small businesses, and brands. Clean code, fast delivery. This page was built by me.',
+        cta: 'Get a quote via DM',
+      },
+      pole: {
+        num: '02',
         tag: 'Online & Offline',
         title: 'POLE CLASSES',
         desc: 'Private 1-on-1 pole lessons for all levels — via video call or in person in Bali. Learn from an advanced instructor who will meet you exactly where you are.',
         cta: 'Book via DM',
       },
       moto: {
-        num: '02',
+        num: '03',
         tag: 'Bali Rides',
         title: 'RIDING GUIDE',
         desc: 'Private full-day riding tours around Bali. Hidden roads, local spots, real adventure — guided by a local rider who knows every route.',
         cta: 'Enquire via DM',
-      },
-      web: {
-        num: '03',
-        tag: 'Development',
-        title: 'WEB DEVELOPMENT',
-        desc: 'Custom websites and web apps for creators, small businesses, and brands. Clean code, fast delivery. This page was built by me.',
-        cta: 'Get a quote via DM',
       },
     },
     footer: {
@@ -60,26 +60,26 @@ export const translations = {
       services: 'Yang saya tawarkan',
     },
     services: {
-      pole: {
+      web: {
         num: '01',
+        tag: 'Pengembangan Web',
+        title: 'WEB DEVELOPMENT',
+        desc: 'Website dan web app custom untuk kreator, bisnis kecil, dan brand. Kode bersih, pengerjaan cepat. Halaman ini dibuat oleh saya.',
+        cta: 'Minta penawaran via DM',
+      },
+      pole: {
+        num: '02',
         tag: 'Online & Offline',
         title: 'KELAS POLE',
         desc: 'Pelajaran pole privat 1-on-1 untuk semua level — via video call atau langsung di Bali. Belajar dari instruktur advanced yang menyesuaikan dengan level kamu.',
         cta: 'Pesan via DM',
       },
       moto: {
-        num: '02',
+        num: '03',
         tag: 'Riding Bali',
         title: 'PEMANDU RIDING',
         desc: 'Tur riding privat seharian keliling Bali. Jalan tersembunyi, spot lokal, petualangan nyata — dipandu rider lokal yang hafal setiap rute.',
         cta: 'Tanya via DM',
-      },
-      web: {
-        num: '03',
-        tag: 'Pengembangan Web',
-        title: 'WEB DEVELOPMENT',
-        desc: 'Website dan web app custom untuk kreator, bisnis kecil, dan brand. Kode bersih, pengerjaan cepat. Halaman ini dibuat oleh saya.',
-        cta: 'Minta penawaran via DM',
       },
     },
     footer: {
@@ -91,3 +91,4 @@ export const translations = {
 
 export type Lang = keyof typeof translations;
 export type Translations = typeof translations.en;
+export type Service = typeof translations.en.services.pole;

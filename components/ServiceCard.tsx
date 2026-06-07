@@ -1,5 +1,6 @@
 import { type Service } from '@/lib/translations';
 import Link from 'next/link';
+import { twMerge } from 'tailwind-merge';
 
 export const ServiceCard = ({
   service,
@@ -16,19 +17,23 @@ export const ServiceCard = ({
 
   return (
     <div
-      className={`transition-color relative flex min-h-70 animate-fade-up
-        flex-col justify-end overflow-hidden rounded-sm border-[0.5px]
-        border-[#ffffff14] duration-200 before:absolute before:top-0
-        before:bottom-0 before:left-0 before:z-2 before:w-0.75
-        before:origin-bottom before:scale-y-0 before:bg-accent
-        before:transition-transform before:duration-250 before:ease-in-out
-        hover:border-white/16 hover:before:scale-y-100 ${delayClass[index]}`}
+      className={twMerge(
+        `transition-color relative flex min-h-70 animate-fade-up flex-col
+        justify-end overflow-hidden rounded-sm duration-200 before:absolute
+        before:top-0 before:bottom-0 before:left-0 before:z-2 before:w-0.75
+        before:origin-bottom before:scale-y-0 before:transition-transform
+        before:duration-250 before:ease-in-out hover:border-white/16
+        hover:before:scale-y-100 ${delayClass[index]}`,
+        index === 1 ? 'before:bg-accent2' : 'before:bg-accent',
+      )}
     >
       <div className="rounded-sm bg-card-bg p-4">
         <div className="mb-2 flex items-start justify-between">
           <span
-            className="font-family-bebas text-[12px] tracking-widest
-              text-accent"
+            className={twMerge(
+              'tracking-wides font-family-bebas text-[12px] text-accent',
+              index === 1 ? 'text-accent2' : 'text-accent',
+            )}
           >
             {service.num}
           </span>
@@ -49,9 +54,13 @@ export const ServiceCard = ({
           {service.desc}
         </p>
         <Link
-          href=""
-          className="mt-3.5 inline-flex items-center gap-1.5 text-[12px]
-            font-medium tracking-[0.08em] text-accent uppercase"
+          href="https://instagram.com/inna.koss88"
+          target="_blank"
+          className={twMerge(
+            `mt-3.5 inline-flex items-center gap-1.5 text-[12px] font-medium
+            tracking-[0.08em] uppercase`,
+            index === 1 ? 'text-accent2' : 'text-accent',
+          )}
         >
           <span>{service.cta}</span>→
         </Link>

@@ -43,6 +43,7 @@ export const Hero = () => {
         </div>
         <Link
           href="https://instagram.com/inna.koss88"
+          target="_blank"
           className="inline-flex animate-fade-up items-center gap-2 rounded-xs
             bg-accent px-6 py-3.25 text-[13px] font-medium tracking-[0.06em]
             text-black [animation-delay:0.38s]

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Bebas_Neue, DM_Sans } from 'next/font/google';
 import { LangProvider } from '@/context/LangContext';
-import '../globals.css';
+import './globals.css';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],

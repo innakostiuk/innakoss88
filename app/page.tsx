@@ -4,9 +4,7 @@ import { Main } from '@/components/Main';
 export default function Home() {
   return (
     <div>
-      {/* Hero */}
       <Hero />
-      {/* Main */}
       <Main />
     </div>
   );

@@ -2,6 +2,12 @@ import { type Service } from '@/lib/translations';
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 
+const SERVICE_VIDEOS = [
+  'https://udt6dp7duepdgpfb.public.blob.vercel-storage.com/webdev.mp4',
+  'https://udt6dp7duepdgpfb.public.blob.vercel-storage.com/pole.mp4',
+  'https://udt6dp7duepdgpfb.public.blob.vercel-storage.com/moto.mp4',
+];
+
 export const ServiceCard = ({
   service,
   index,
@@ -27,7 +33,25 @@ export const ServiceCard = ({
         index === 1 ? 'before:bg-accent2' : 'before:bg-accent',
       )}
     >
-      <div className="rounded-sm bg-card-bg p-4">
+      <div
+        className="absolute inset-0 z-0 after:absolute after:inset-0 after:z-10
+          after:bg-[linear-gradient(to_bottom,rgba(13,13,13,0.05)_0%,rgba(13,13,13,0.05)_30%,rgba(13,13,13,0.45)_70%,rgba(13,13,13,0.92)_100%)]
+          after:content-['']"
+      >
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          src={SERVICE_VIDEOS[index]}
+          className={twMerge(
+            'size-full object-cover opacity-55',
+            index === 2 ? 'object-[50%_73%]' : 'object-center',
+          )}
+        />
+      </div>
+      <div className="z-10 rounded-sm p-4">
         <div className="mb-2 flex items-start justify-between">
           <span
             className={twMerge(
@@ -38,8 +62,8 @@ export const ServiceCard = ({
             {service.num}
           </span>
           <span
-            className="rounded-xs bg-[#ffffff12] px-2 py-0.75 text-[10px]
-              tracking-[0.12em] text-muted uppercase"
+            className="rounded-xs bg-black/50 px-2 py-0.75 text-[10px]
+              tracking-[0.12em] text-white/70 uppercase backdrop-blur-sm"
           >
             {service.tag}
           </span>

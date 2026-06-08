@@ -9,7 +9,22 @@ export const Hero = () => {
   const t = translations[lang];
   const bio = translations;
   return (
-    <div className="flex min-h-[95vh] flex-col justify-end pb-14">
+    <div className="relative flex min-h-[95vh] flex-col justify-end pb-14">
+      <div
+        className="absolute inset-0 z-0 after:absolute after:inset-0 after:z-10
+          after:bg-[linear-gradient(to_bottom,rgba(13,13,13,0.05)_0%,rgba(13,13,13,0.05)_30%,rgba(13,13,13,0.45)_70%,rgba(13,13,13,0.92)_100%)]
+          after:content-['']"
+      >
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          src="https://udt6dp7duepdgpfb.public.blob.vercel-storage.com/hero.mp4"
+          className="size-full object-cover object-center opacity-75"
+        />
+      </div>
       <div className="mx-auto w-full max-w-160 px-6">
         <span
           className="mb-3 block animate-fade-up text-[11px] font-medium

@@ -16,7 +16,7 @@ export const Main = () => {
       <p className="mb-4 text-[10px] tracking-[0.2em] text-muted uppercase">
         {t.section.services}
       </p>
-      <section className="flex flex-col gap-0.5">
+      <section className="flex flex-col gap-4">
         {services.map((service, index) => (
           <ServiceCard key={service.num} service={service} index={index} />
         ))}

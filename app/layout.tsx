@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Bebas_Neue, DM_Sans } from 'next/font/google';
 import { LangProvider } from '@/context/LangContext';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 const dmSans = DM_Sans({
@@ -32,6 +33,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col font-sans">
         <LangProvider>{children}</LangProvider>
+        <Analytics />
       </body>
     </html>
   );
